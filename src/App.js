@@ -1,17 +1,23 @@
+import React from 'react';
 import './App.css';
 
 function SecretComponent() {
-  return <h1>Secret information for authorized users only</h1>
+  return <h1>Super Secret information for authorized users only</h1>;
 }
 
 function RegularComponent() {
-  <h1>Everyone can see this component.</h1>
+  return <h1>Everyone can see this component</h1>;
 }
-function App() {
-  return <div className="App">Components here eventually</div>;
+
+function App({ authorized }) {
+  return (
+    <>
+      {authorized ? <SecretComponent /> : <RegularComponent />}
+    </>
+  );
 }
 
 export default App;
 
 
-// <></> is fragment in place of <div></div>
+// <></> is fragment in place of <div></div> <React.Fragment></React.Fragment>
