@@ -1,23 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
-function SecretComponent() {
-  return <h1>Super Secret information for authorized users only</h1>;
-}
+// https://api.github.com/users/skibocreative
 
-function RegularComponent() {
-  return <h1>Everyone can see this component</h1>;
-}
-
-function App({ authorized }) {
+function App() {
+  
+  
   return (
-    <>
-      {authorized ? <SecretComponent /> : <RegularComponent />}
-    </>
+    <div>
+      <h1>Hello React Testing Library</h1>
+    </div>
   );
 }
 
 export default App;
 
 
-// <></> is fragment in place of <div></div> <React.Fragment></React.Fragment>
+// <></> is fragment in place of <div></div> | <React.Fragment></React.Fragment>
